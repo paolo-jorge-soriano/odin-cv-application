@@ -2,58 +2,44 @@ import "../styles/PersonalInfoForm.css";
 
 export default function PersonalInfoForm() {
   return (
-    <form className="personal-info-form">
+    <div className="personal-info-container">
       <h1>Personal Information</h1>
-
-      <div>
-        <label htmlFor="full-name">Full Name:</label>
+      <form>
         <input
           type="text"
           id="full-name"
           name="full-name"
-          placeholder="John Doe"
+          placeholder="Full Name"
         />
-      </div>
 
-      <div>
-        <label htmlFor="professional-title">Professional Title:</label>
         <input
           type="text"
-          id="professional-title"
-          name="professional-title"
-          placeholder="Web Developer"
+          id="job-title"
+          name="job-title"
+          placeholder="Job Title"
         />
-      </div>
 
-      <div>
-        <label htmlFor="phone-number">Phone Number:</label>
         <input
           type="text"
           id="phone-number"
           name="phone-number"
-          placeholder="09123456789"
+          placeholder="Phone Number"
         />
-      </div>
 
-      <div>
-        <label htmlFor="email-address">Email Adress:</label>
         <input
           type="email"
           id="email-address"
           name="email-address"
-          placeholder="johndoe@email.com"
+          placeholder="Email Address"
         />
-      </div>
 
-      <div>
-        <label htmlFor="address">Address:</label>
         <input
           type="text"
-          id="address"
-          name="address"
-          placeholder="Los Angeles, CA"
+          id="location"
+          name="location"
+          placeholder="Location"
         />
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
