@@ -1,4 +1,24 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-container > * {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .form-container {
+  grid-column: 1 / 2;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.preview {
+  grid-column: 2 / 3;
 }

@@ -1,0 +1,45 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form > input,
+form > textarea {
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+form > textarea {
+  resize: none;
+}
+
+form > button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.personal-info-container,
+.education-container,
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 450px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.btn-add-education,
+.btn-add-experience {
+  background-color: #3182ce;
+  color: white;
+}

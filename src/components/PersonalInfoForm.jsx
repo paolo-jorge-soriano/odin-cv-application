@@ -1,4 +1,4 @@
-import "../styles/PersonalInfoForm.css";
+import "../styles/form.css";
 
 export default function PersonalInfoForm() {
   return (
@@ -11,28 +11,18 @@ export default function PersonalInfoForm() {
           name="full-name"
           placeholder="Full Name"
         />
-
-        <input
-          type="text"
-          id="job-title"
-          name="job-title"
-          placeholder="Job Title"
-        />
-
         <input
           type="text"
           id="phone-number"
           name="phone-number"
           placeholder="Phone Number"
         />
-
         <input
           type="email"
           id="email-address"
           name="email-address"
           placeholder="Email Address"
         />
-
         <input
           type="text"
           id="location"

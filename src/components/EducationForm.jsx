@@ -1,4 +1,4 @@
-import "../styles/EducationForm.css";
+import "../styles/form.css";
 
 export default function EducationForm() {
   return (
@@ -9,18 +9,20 @@ export default function EducationForm() {
         <input type="text" id="degree" name="degree" placeholder="Degree" />
         <input
           type="text"
-          id="start-date"
-          name="start-date"
+          id="education-start-date"
+          name="education-start-date"
           placeholder="Start Date"
         />
         <input
           type="text"
-          id="end-date"
-          name="end-date"
+          id="education-end-date"
+          name="education-end-date"
           placeholder="End Date"
         />
 
-        <button type="button">Add Education</button>
+        <button type="button" className="btn-add-education">
+          Add Education
+        </button>
       </form>
     </div>
   );
