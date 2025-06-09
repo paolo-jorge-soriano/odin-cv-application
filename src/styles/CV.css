@@ -36,13 +36,15 @@
   border-bottom: 1px solid black;
 }
 
-.education-content {
+.education-content,
+.experience-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.education-entry {
+.education-entry,
+.experience-entry {
   display: flex;
   justify-content: space-between;
 }

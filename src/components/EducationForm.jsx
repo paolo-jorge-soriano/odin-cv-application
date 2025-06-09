@@ -54,7 +54,7 @@ export default function EducationForm({ educationList, setEducationList }) {
               <h3>{edu.school}</h3>
               <button
                 type="button"
-                className="btn-delete-education"
+                className="btn-delete"
                 onClick={() => handleDeleteEducation(index)}
               >
                 Delete

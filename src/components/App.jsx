@@ -14,6 +14,7 @@ export default function App() {
   });
 
   const [educationList, setEducationList] = useState([]);
+  const [experienceList, setExperienceList] = useState([]);
 
   return (
     <>
@@ -27,11 +28,18 @@ export default function App() {
             educationList={educationList}
             setEducationList={setEducationList}
           />
-          <ExperienceForm />
+          <ExperienceForm
+            experienceList={experienceList}
+            setExperienceList={setExperienceList}
+          />
         </div>
 
         <div className="preview">
-          <CV personalInfo={personalInfo} educationList={educationList} />
+          <CV
+            personalInfo={personalInfo}
+            educationList={educationList}
+            experienceList={experienceList}
+          />
         </div>
       </div>
     </>

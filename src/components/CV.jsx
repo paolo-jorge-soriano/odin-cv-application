@@ -3,7 +3,7 @@ import phoneIcon from "../assets/phone-icon.svg";
 import emailIcon from "../assets/email-icon.svg";
 import locationIcon from "../assets/location-icon.svg";
 
-export default function CV({ personalInfo, educationList }) {
+export default function CV({ personalInfo, educationList, experienceList }) {
   return (
     <div className="cv-container">
       <div className="cv-personal-info">
@@ -55,6 +55,26 @@ export default function CV({ personalInfo, educationList }) {
       <div className="cv-experience">
         <div className="cv-header">
           <h2>Experience</h2>
+        </div>
+        <div className="experience-content">
+          {experienceList.length === 0 ? (
+            <p>No experience added yet.</p>
+          ) : (
+            experienceList.map((exp, index) => (
+              <div key={index} className="experience-entry">
+                <div>
+                  <h3>{exp.jobTitle}</h3>
+                  <p>{exp.company}</p>
+                  <p>{exp.jobDescription}</p>
+                </div>
+                <div>
+                  <p>
+                    {exp.startDate} - {exp.endDate}
+                  </p>
+                </div>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
