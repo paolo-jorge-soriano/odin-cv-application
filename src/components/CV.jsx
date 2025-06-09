@@ -3,26 +3,26 @@ import phoneIcon from "../assets/phone-icon.svg";
 import emailIcon from "../assets/email-icon.svg";
 import locationIcon from "../assets/location-icon.svg";
 
-export default function CV() {
+export default function CV({ personalInfo }) {
   return (
     <div className="cv-container">
       <div className="cv-personal-info">
-        <h1>John Doe</h1>
+        <h1>{personalInfo.fullName || "Full Name"}</h1>
 
         <div className="details-container">
           <div className="details">
             <img src={phoneIcon} alt="phone-icon" />
-            <p>0912 345 6789</p>
+            <p>{personalInfo.phoneNumber || "Phone Number"}</p>
           </div>
 
           <div className="details">
             <img src={emailIcon} alt="email-icon" />
-            <p>john-doe@email.com</p>
+            <p>{personalInfo.email || "Email Address"}</p>
           </div>
 
           <div className="details">
             <img src={locationIcon} alt="location-icon" />
-            <p>Los Angeles, CA</p>
+            <p>{personalInfo.location || "Location"}</p>
           </div>
         </div>
       </div>

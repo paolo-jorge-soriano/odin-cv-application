@@ -6,17 +6,27 @@ import ExperienceForm from "./ExperienceForm";
 import CV from "./CV";
 
 export default function App() {
+  const [personalInfo, setPersonalInfo] = useState({
+    fullName: "",
+    phoneNumber: "",
+    email: "",
+    location: "",
+  });
+
   return (
     <>
       <div className="grid-container">
         <div className="form-container">
-          <PersonalInfoForm />
+          <PersonalInfoForm
+            personalInfo={personalInfo}
+            setPersonalInfo={setPersonalInfo}
+          />
           <EducationForm />
           <ExperienceForm />
         </div>
 
         <div className="preview">
-          <CV />
+          <CV personalInfo={personalInfo} />
         </div>
       </div>
     </>
