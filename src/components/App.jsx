@@ -13,6 +13,8 @@ export default function App() {
     location: "",
   });
 
+  const [educationList, setEducationList] = useState([]);
+
   return (
     <>
       <div className="grid-container">
@@ -21,12 +23,15 @@ export default function App() {
             personalInfo={personalInfo}
             setPersonalInfo={setPersonalInfo}
           />
-          <EducationForm />
+          <EducationForm
+            educationList={educationList}
+            setEducationList={setEducationList}
+          />
           <ExperienceForm />
         </div>
 
         <div className="preview">
-          <CV personalInfo={personalInfo} />
+          <CV personalInfo={personalInfo} educationList={educationList} />
         </div>
       </div>
     </>

@@ -3,7 +3,7 @@ import phoneIcon from "../assets/phone-icon.svg";
 import emailIcon from "../assets/email-icon.svg";
 import locationIcon from "../assets/location-icon.svg";
 
-export default function CV({ personalInfo }) {
+export default function CV({ personalInfo, educationList }) {
   return (
     <div className="cv-container">
       <div className="cv-personal-info">
@@ -30,6 +30,25 @@ export default function CV({ personalInfo }) {
       <div className="cv-education">
         <div className="cv-header">
           <h2>Education</h2>
+        </div>
+        <div className="education-content">
+          {educationList.length === 0 ? (
+            <p>No education added yet.</p>
+          ) : (
+            educationList.map((edu, index) => (
+              <div key={index} className="education-entry">
+                <div>
+                  <h3>{edu.school}</h3>
+                  <p>{edu.degree}</p>
+                </div>
+                <div>
+                  <p>
+                    {edu.startDate} - {edu.endDate}
+                  </p>
+                </div>
+              </div>
+            ))
+          )}
         </div>
       </div>
 

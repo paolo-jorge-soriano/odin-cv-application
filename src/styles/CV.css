@@ -35,3 +35,14 @@
 .cv-header {
   border-bottom: 1px solid black;
 }
+
+.education-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-entry {
+  display: flex;
+  justify-content: space-between;
+}
